@@ -3,207 +3,227 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AzeLand - İdarəetmə Paneli</title>
+    <title>AzeLand #İmperatorluğu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.leaderos.net/icons/v7/css/all.min.css">
     <style>
-        :root { --primary: #2ecc71; --dark: #f8f9fa; --card-bg: #ffffff; }
-        body { background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; transition: 0.3s; }
-        
-        /* Header & Banner */
-        .header-banner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://wallpaperaccess.com/full/1151158.jpg');
-            background-size: cover; background-position: center; padding: 80px 0; color: white; text-align: center;
+        :root {
+            --primary: #2ecc71;
+            --primary-glow: rgba(46, 204, 113, 0.4);
+            --bg-body: #f4f7f6;
+            --white: #ffffff;
         }
-        .logo-img { width: 180px; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
 
-        /* Navbar */
-        .navbar { background: white !important; border-bottom: 3px solid var(--primary); padding: 15px 0; }
-        .nav-link { font-weight: 600; color: #444 !important; margin: 0 10px; }
-        .nav-link.active { color: var(--primary) !important; }
-        
-        /* Admin Panel Stili */
-        #admin-section { display: none; background: #e8f5e9; border: 2px dashed var(--primary); border-radius: 15px; padding: 20px; margin-bottom: 30px; }
-        .admin-badge { background: var(--primary); color: white; padding: 5px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+        body { background-color: var(--bg-body); font-family: 'Poppins', sans-serif; color: #333; }
 
-        /* Xəbər Kartları */
-        .news-card { border: none; border-radius: 15px; overflow: hidden; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .news-card:hover { transform: translateY(-5px); }
-        .news-img { height: 200px; object-fit: cover; width: 100%; }
+        /* Banner Design */
+        .header-banner {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.imgur.com/your-minecraft-bg.jpg');
+            background-size: cover; background-position: center;
+            height: 450px; display: flex; align-items: center; position: relative;
+        }
+        .banner-content { width: 100%; text-align: center; color: white; }
+        .logo-main { width: 220px; margin-bottom: 20px; animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
 
-        /* Giriş Modalı */
-        .modal-content { border-radius: 20px; border: none; }
-        .btn-primary { background: var(--primary) !important; border: none; padding: 10px 25px; border-radius: 10px; }
+        /* Navbar Customization */
+        .navbar { background: var(--white) !important; border-radius: 0 0 25px 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: -30px; position: relative; z-index: 1000; }
+        .nav-link { font-weight: 500; padding: 15px 20px !important; transition: 0.3s; border-radius: 15px; }
+        .nav-link:hover, .nav-link.active { background: #f0fdf4; color: var(--primary) !important; }
+
+        /* Admin Panel Floating Style (Şəkildəki kimi) */
+        #admin-panel {
+            display: none; position: fixed; top: 100px; right: 20px; width: 350px;
+            background: white; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            z-index: 9999; border: 1px solid #eee; overflow: hidden; animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        .admin-header { background: var(--primary); color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; }
+        .admin-body { padding: 20px; }
+
+        /* Modern News Cards */
+        .news-card { border: none; border-radius: 20px; background: white; transition: 0.4s; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
+        .news-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .news-badge { position: absolute; top: 15px; left: 15px; background: var(--primary); color: white; padding: 5px 15px; border-radius: 50px; font-size: 12px; }
+
+        /* Buttons */
+        .btn-main { background: var(--primary); color: white; border: none; padding: 12px 35px; border-radius: 50px; font-weight: bold; box-shadow: 0 8px 20px var(--primary-glow); }
+        .btn-main:hover { background: #27ae60; color: white; transform: scale(1.05); }
+        .btn-orange { background: #ff9f43; color: white; border-radius: 12px; padding: 10px 25px; }
     </style>
 </head>
 <body>
 
-<div class="header-banner">
-    <div class="container">
-        <img src="https://i.imgur.com/8YvL6M3.png" class="logo-img mb-3" alt="AzeLand">
-        <h1 class="fw-bold">AZELAND İMPERATORLUĞU</h1>
-        <p class="lead">Online: <span id="player-count">42</span> | play.azeland.xyz</p>
-        <button class="btn btn-light rounded-pill px-4 fw-bold shadow">İndi Oyna</button>
+<section class="header-banner">
+    <div class="banner-content container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 d-none d-lg-block text-start">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-gamepad fs-1 me-3"></i>
+                    <div><span class="d-block opacity-75 small">0 PLAYERS ONLINE</span><strong>MC.AZELAND.XYZ</strong></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="https://i.imgur.com/8YvL6M3.png" class="logo-main" alt="Logo">
+                <div class="mt-2"><button class="btn btn-main btn-lg">İndi Oyna</button></div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block text-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div><span class="d-block opacity-75 small">QOŞULMAQ ÜÇÜN KLİKLƏYİN!</span><strong>DISCORD SERVER</strong></div>
+                    <i class="fab fa-discord fs-1 ms-3"></i>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
-    <div class="container">
-        <div class="collapse navbar-collapse">
+<nav class="navbar navbar-expand-lg container">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a class="nav-link active" href="#">Əsas Səhifə</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Mağaza</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Kömək</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Dəstək</a></li>
-                <li class="nav-item" id="admin-btn-nav" style="display:none;">
-                    <a class="nav-link text-danger fw-bold" href="#admin-section">🛡️ Admin Panel</a>
-                </li>
             </ul>
-            <div class="d-flex align-items-center" id="auth-area">
-                <button class="btn btn-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Daxil ol</button>
-                <button class="btn btn-primary ms-2">Qeyd Ol</button>
+            <div class="d-flex align-items-center" id="user-nav-box">
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-user me-2"></i>Daxil ol</a>
+                <button class="btn btn-orange ms-3 fw-bold">Qeyd Ol</button>
             </div>
         </div>
     </div>
 </nav>
 
-<main class="container my-5">
-    
-    <section id="admin-section">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h4 class="mb-0 text-success"><span class="admin-badge me-2">ADMIN</span> Xoş gəldin, Məhəmməd!</h4>
-            <button class="btn btn-sm btn-outline-danger" onclick="logout()">Çıxış Et</button>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label class="form-label small fw-bold">Xəbər Şəkli (URL)</label>
-                <input type="text" id="news-img-input" class="form-control mb-2" placeholder="https://...">
+<main class="container mt-5 pt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Xəbərlər</h2>
+                <nav aria-label="breadcrumb"><ol class="breadcrumb m-0"><li class="breadcrumb-item">Əsas Səhifə</li><li class="breadcrumb-item active">Xəbərlər</li></ol></nav>
             </div>
-            <div class="col-md-4">
-                <label class="form-label small fw-bold">Başlıq</label>
-                <input type="text" id="news-title-input" class="form-control mb-2" placeholder="Xəbər başlığı...">
-            </div>
-            <div class="col-md-4">
-                <label class="form-label small fw-bold">Mətn</label>
-                <textarea id="news-text-input" class="form-control mb-2" rows="1" placeholder="Qısa məlumat..."></textarea>
-            </div>
-        </div>
-        <button class="btn btn-success w-100 mt-2 fw-bold" onclick="addNews()">Xəbəri Paylaş</button>
-    </section>
 
-    <h3 class="mb-4 fw-bold">Son Xəbərlər</h3>
-    <div class="row" id="news-container">
-        <div class="col-md-6 mb-4">
-            <div class="card news-card h-100">
-                <img src="https://i.imgur.com/XqR7m9A.png" class="news-img" alt="Xəbər">
-                <div class="card-body">
-                    <div class="text-muted small mb-2">27 Aprel 2026</div>
-                    <h5 class="fw-bold">AzeLand Yeni Sezon Açılışı!</h5>
-                    <p class="text-muted">Böyük hazırlıqdan sonra AzeLand yenilənmiş Towny sistemi ilə geri qayıdır.</p>
+            <div id="news-feed">
+                <div class="news-card mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-5 position-relative">
+                            <img src="https://i.imgur.com/XqR7m9A.png" class="img-fluid h-100" style="object-fit:cover;">
+                            <span class="news-badge">Yenilənmə</span>
+                        </div>
+                        <div class="col-md-7 p-4">
+                            <small class="text-muted">27 apr 2026 08:57</small>
+                            <h3 class="fw-bold mt-2">BÖYÜK ELAN – AZELAND YENİ SEZON!</h3>
+                            <p class="text-muted small mt-3">Tarix: 20 May 2026. Uzun müddətli hazırlıqdan sonra AzeLand Minecraft Serveri tamamilə yenilənmiş dünyası ilə geri qayıdır...</p>
+                            <button class="btn btn-outline-success btn-sm rounded-pill px-4">Davamını Oxu</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card border-0 rounded-20 shadow-sm p-4 text-center bg-primary text-white mb-4" style="border-radius: 20px;">
+                <i class="fab fa-discord mb-3" style="font-size: 50px;"></i>
+                <h5 class="fw-bold">AzeLand Discord</h5>
+                <p class="small opacity-75">Hazırda 1,240 istifadəçi onlayndır.</p>
+                <a href="#" class="btn btn-light w-100 rounded-pill fw-bold text-success">Qoşul</a>
             </div>
         </div>
     </div>
 </main>
 
+<div id="admin-panel">
+    <div class="admin-header">
+        <span>🛡️ ADMIN PANEL</span>
+        <button class="btn-close btn-close-white" onclick="document.getElementById('admin-panel').style.display='none'"></button>
+    </div>
+    <div class="admin-body">
+        <p class="small fw-bold mb-3">Salam, Məhəmməd! Yeni xəbər əlavə et:</p>
+        <input type="text" id="adm-img" class="form-control mb-2" placeholder="Şəkil URL">
+        <input type="text" id="adm-title" class="form-control mb-2" placeholder="Başlıq">
+        <textarea id="adm-text" class="form-control mb-3" rows="3" placeholder="Məzmun..."></textarea>
+        <button class="btn btn-success w-100 fw-bold" onclick="publishNews()">Paylaş</button>
+        <hr>
+        <button class="btn btn-danger btn-sm w-100" onclick="logout()">Sistemdən Çıx</button>
+    </div>
+</div>
+
 <div class="modal fade" id="loginModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content p-4">
+        <div class="modal-content p-4" style="border-radius: 30px;">
             <div class="text-center mb-4">
-                <h4 class="fw-bold">Hesaba Giriş</h4>
-                <p class="text-muted small">Məhəmməd, admin panel üçün öz hesabına gir.</p>
+                <h3 class="fw-bold">Giriş Et</h3>
+                <p class="text-muted">AzeLand-a xoş gəldiniz!</p>
             </div>
-            <div class="mb-3">
-                <label class="form-label small fw-bold">İstifadəçi Adı</label>
-                <input type="text" id="user-input" class="form-control" placeholder="mehemmed">
-            </div>
-            <div class="mb-4">
-                <label class="form-label small fw-bold">Şifrə</label>
-                <input type="password" id="pass-input" class="form-control" placeholder="••••••••">
-            </div>
-            <button class="btn btn-primary w-100 fw-bold" onclick="login()">Giriş Et</button>
+            <input type="text" id="user-in" class="form-control mb-3 p-3" placeholder="İstifadəçi Adı">
+            <input type="password" id="pass-in" class="form-control mb-4 p-3" placeholder="Şifrə">
+            <button class="btn btn-main w-100" onclick="handleLogin()">DAXİL OL</button>
         </div>
     </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Giriş Sistemi
-    function login() {
-        const user = document.getElementById('user-input').value;
-        const pass = document.getElementById('pass-input').value;
+    function handleLogin() {
+        const u = document.getElementById('user-in').value;
+        const p = document.getElementById('pass-in').value;
 
-        if(user === "mehemmed" && pass === "mehemmed2012") {
-            localStorage.setItem('is_admin', 'true');
-            localStorage.setItem('user_name', 'Məhəmməd');
+        if(u === "mehemmed" && p === "mehemmed2012") {
+            localStorage.setItem('role', 'admin');
             location.reload();
         } else {
-            alert("İstifadəçi adı və ya şifrə yanlışdır!");
+            alert("Məlumatlar səhvdir!");
         }
     }
 
-    function logout() {
-        localStorage.clear();
-        location.reload();
-    }
+    function logout() { localStorage.clear(); location.reload(); }
 
-    // Səhifə Yüklənəndə Yoxla
     window.onload = function() {
-        const isAdmin = localStorage.getItem('is_admin');
-        const userName = localStorage.getItem('user_name');
-
-        if(isAdmin === 'true') {
-            document.getElementById('admin-section').style.display = 'block';
-            document.getElementById('admin-btn-nav').style.display = 'block';
-            document.getElementById('auth-area').innerHTML = `
-                <div class="d-flex align-items-center">
-                    <img src="https://minotar.net/helm/mehemmed/32" class="rounded-circle me-2">
-                    <span class="fw-bold me-3 text-success">${userName}</span>
+        if(localStorage.getItem('role') === 'admin') {
+            document.getElementById('admin-panel').style.display = 'block';
+            document.getElementById('user-nav-box').innerHTML = `
+                <div class="d-flex align-items-center bg-light p-2 rounded-pill px-3 border border-success">
+                    <img src="https://minotar.net/avatar/mehemmed/30" class="rounded-circle me-2">
+                    <span class="fw-bold text-success">Məhəmməd</span>
+                    <i class="fas fa-chevron-down ms-2 small"></i>
                 </div>`;
         }
-
-        // Saxlanılmış xəbərləri yüklə
-        const savedNews = JSON.parse(localStorage.getItem('news_list') || '[]');
-        savedNews.forEach(item => renderNews(item.title, item.text, item.img));
+        // Yaddaşdakıları gətir
+        const news = JSON.parse(localStorage.getItem('db_news') || '[]');
+        news.forEach(n => drawNews(n.title, n.text, n.img));
     };
 
-    // Xəbər Əlavə Etmə Funksiyası
-    function addNews() {
-        const img = document.getElementById('news-img-input').value || 'https://via.placeholder.com/800x400';
-        const title = document.getElementById('news-title-input').value;
-        const text = document.getElementById('news-text-input').value;
+    function publishNews() {
+        const title = document.getElementById('adm-title').value;
+        const text = document.getElementById('adm-text').value;
+        const img = document.getElementById('adm-img').value || 'https://via.placeholder.com/400';
 
-        if(!title || !text) return alert("Başlıq və mətn mütləqdir!");
+        if(!title || !text) return;
 
-        const newsItem = { img, title, text };
+        const data = { title, text, img };
+        const db = JSON.parse(localStorage.getItem('db_news') || '[]');
+        db.unshift(data);
+        localStorage.setItem('db_news', JSON.stringify(db));
         
-        // LocalStorage-ə qeyd et
-        const newsList = JSON.parse(localStorage.getItem('news_list') || '[]');
-        newsList.unshift(newsItem);
-        localStorage.setItem('news_list', JSON.stringify(newsList));
-
-        renderNews(title, text, img);
-        
-        // Formanı təmizlə
-        document.getElementById('news-img-input').value = "";
-        document.getElementById('news-title-input').value = "";
-        document.getElementById('news-text-input').value = "";
+        drawNews(title, text, img);
+        document.getElementById('adm-title').value = "";
+        document.getElementById('adm-text').value = "";
     }
 
-    function renderNews(title, text, img) {
-        const container = document.getElementById('news-container');
-        const html = `
-            <div class="col-md-6 mb-4">
-                <div class="card news-card h-100 shadow">
-                    <img src="${img}" class="news-img">
-                    <div class="card-body">
-                        <div class="text-muted small mb-2">İndi paylaşıldı</div>
-                        <h5 class="fw-bold">${title}</h5>
-                        <p class="text-muted">${text}</p>
+    function drawNews(t, m, i) {
+        const container = document.getElementById('news-feed');
+        const card = `
+            <div class="news-card mb-4 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="${i}" class="img-fluid h-100" style="object-fit:cover;"></div>
+                    <div class="col-md-7 p-4">
+                        <small class="text-success fw-bold">YENİ PAYLAŞIM</small>
+                        <h3 class="fw-bold mt-2">${t}</h3>
+                        <p class="text-muted small">${m}</p>
+                        <button class="btn btn-outline-success btn-sm rounded-pill px-4">Oxu</button>
                     </div>
                 </div>
             </div>`;
-        container.insertAdjacentHTML('afterbegin', html);
+        container.insertAdjacentHTML('afterbegin', card);
     }
 </script>
 

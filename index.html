@@ -1,1343 +1,211 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="LeaderOS">
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?cache=1777282776">
-	
-	<title>AzeTopia #İmperatorluğu - Azərbaycan Minecraft Serveri</title>
-	<meta name="description" content="" />
-	<link rel="canonical" href="https://azetopia.xyz/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="AzeTopia #İmperatorluğu - Azərbaycan Minecraft Serveri" />
-	<meta property="og:description" content="" />
-	<meta property="og:url" content="https://azetopia.xyz/" />
-	<meta property="og:site_name" content="AzeTopia #İmperatorluğu" />
-		
-	<!-- CSRF -->
-	<meta name="csrf-token" content="4293584a9614fef15e7c70c20a2c432487a73ed864df8da70e3ffb4d50f28acb">
-	
-	<!-- EXTRAS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.4.0/dist/select2-bootstrap4.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.min.css">
-	
-	<!-- FONTS -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.leaderos.net/icons/v7/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-	
-	<!-- THEMES -->
-	<link rel="stylesheet" type="text/css" href="/assets/blaze/css/theme.min.1777265343.css">
-	<link rel="stylesheet" type="text/css" href="/assets/blaze/css/extra.1777265343.css">
-	
-	<link rel="stylesheet" type="text/css" href="/assets/blaze/css/plugins/ckeditor/content-styles.1777265343.css">
-	
-	<style type="text/css">
-		.credit-icon::before {
-			content: ' ';
-			display: inline-block;
-			width: 1rem;
-			height: 1rem;
-			background-image: url(/assets/blaze/img/extras/credit.png);
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: 1rem;
-		}
-	</style>
-	
-	<!-- THEME SETTINGS -->
-	<script>
-		var defaultTheme = "light"; // light, dark
-	</script>
-		<style>
-		:root {
-			--primary: #ff9400;
-			--primary-darker: #ff7100;
-			--secondary: #ffb15c;
-			--tertiary: #fff3e7;
-		}
-	</style>
-	
-	<!-- LIGHT -->
-	<style>
-		.btn-link:hover {
-			color: #ff9400;
-		}
-		.btn-primary {
-			background-color: #ff9400 !important;
-			border-color: #ff9400 !important;
-			color: #fff !important;
-		}
-		.btn-primary:hover {
-			color: #fff !important;
-			background-color: #ff7100 !important;
-			border-color: #ff7100 !important;
-		}
-		.btn-translucent-primary {
-			background-color: #fff3e7 !important;
-			color: #ff9400 !important;
-		}
-		.btn-translucent-primary:hover {
-			color: #fff !important;
-			background-color: #ff9400 !important;
-		}
-		.form-group {
-			margin-bottom: 1rem;
-		}
-		.list-group-flush>.list-group-item:last-child {
-			border-bottom-left-radius: 15px;
-			border-bottom-right-radius: 15px;
-		}
-		.dropdown-item:first-child {
-			border-top-left-radius: 15px !important;
-			border-top-right-radius: 15px !important;
-		}
-		.dropdown-item:last-child {
-			border-bottom-left-radius: 15px !important;
-			border-bottom-right-radius: 15px !important;
-		}
-		a {
-			color: #000;
-		}
-		a:hover {
-			color: #ff7100;
-		}
-		.navbar-expand-lg .navbar-nav .nav-item.active>.nav-link:not(.disabled),
-		.navbar-expand-lg .navbar-nav .nav-item:hover>.nav-link:not(.disabled),
-		.navbar-expand-lg .navbar-nav .nav-item:focus>.nav-link:not(.disabled),
-		.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-			color: #ff9400 !important;
-			background-color: #fff3e7 !important;
-		}
-		.signin-form .signin-form-card .nav-link-style:hover {
-			color: #ff9400 !important;
-		}
-		.list-group-item.active {
-			color: #fff !important;
-			background-color: #ff9400 !important;
-		}
-		.linked-list .list-group-item a:hover {
-			background-color: #fff3e7 !important;
-			color: #ff9400 !important;
-		}
-		.list-group-item.active a, .list-group-item.active a:hover {
-			color: #fff !important;
-		}
-		.widget-link:hover {
-			color: #ff9400 !important;
-		}
-		.select2-results__option[aria-selected=true] {
-			background-color: #ff9400 !important;
-			color: #fff !important;
-		}
-		.select2-results__option--highlighted {
-			background-color: #fff3e7 !important;
-			color: #ff9400 !important;
-		}
-		
-		.dropdown-item:hover, .dropdown-item.active {
-			background-color: #fff3e7 !important;
-			color: #ff9400 !important;
-		}
-		
-		.widget-light .widget-title {
-			color: #ffb15c !important;
-		}
-		.text-primary {
-			color: #ff9400 !important;
-		}
-		.bg-primary {
-			background-color: #ff9400 !important;
-		}
-		.store-nav .nav-link.active, .store-nav .nav-link:hover {
-			background-color: #ff9400 !important;
-		}
-		a:hover, .breadcrumb-item>a:hover, .nav-link-style:hover {
-			color: #ff9400 !important;
-		}
-		.btn-danger:hover,
-		.btn-success:hover,
-		.btn-primary:hover,
-		.btn-info:hover,
-		.btn-warning:hover {
-			color: #fff !important;
-		}
-		.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-			color: #ff9400 !important;
-			border-color: #ff9400 !important;
-		}
-	</style>
-	
-	<!-- DARK -->
-	<style>
-		body.dark {
-			color: rgba(255, 255, 255, 0.7) !important;
-			background-color: #171a21 !important;
-		}
-		.dark .text-body {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark a {
-			color: #fff;
-		}
-		.dark a:hover {
-			color: #ff9400;
-		}
-		.dark .btn-light {
-			background-color: #111111 !important;
-			color: #ffffff !important;
-			border-color: transparent !important;
-			transition: background-color 0.2s ease-in-out;
-		}
-		.dark .btn-light:hover {
-			background-color: #171a21 !important;
-		}
-		.dark .btn-secondary {
-			background-color: #171a21 !important;
-			color: #ffffff !important;
-			border-color: transparent !important;
-			transition: background-color 0.2s ease-in-out;
-		}
-		.dark .btn-secondary:hover {
-			background-color: #2a2e37 !important;
-		}
-		.dark .nav-link-style, .dark .text-muted {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark .form-check-input {
-			border-color: rgba(62, 62, 62, 0.7) !important;
-			background-color: #171a21 !important;
-		}
-		.dark .form-check-label {
-			cursor: pointer;
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark .header {
-			background-color: #111111 !important;
-		}
-		.dark .header .nav-link, .dark .header .nav-link-style {
-			color: #fff !important;
-		}
-		.dark .navbar-expand-lg .navbar-nav .nav-item.active>.nav-link:not(.disabled),
-		.dark .navbar-expand-lg .navbar-nav .nav-item:hover>.nav-link:not(.disabled),
-		.dark .navbar-expand-lg .navbar-nav .nav-item:focus>.nav-link:not(.disabled),
-		.dark .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-			color: #ffffff !important;
-			background-color: #ff9400 !important;
-		}
-		.dark .header .offcanvas {
-			background-color: #111111 !important;
-		}
-		.dark .offcanvas-collapse .offcanvas-body .navbar-nav .nav-item {
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .offcanvas-collapse .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item {
-			color: #fff !important;
-		}
-		.dark .btn-close {
-			background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/.625em auto no-repeat;
-		}
-		.dark .footer, .dark footer .bg-dark {
-			background-color: #111111 !important;
-		}
-		.dark .btn-play span {
-			color: #fff !important;
-			background-color: #171a21 !important;
-		}
-		.dark h1, .dark .h1, .dark h2, .dark .h2, .dark h3, .dark .h3, .dark h4, .dark .h4, .dark h5, .dark .h5, .dark h6, .dark .h6 {
-			color: #fff !important;
-		}
-		.dark .breadcrumb-item>a {
-			color: #fff !important;
-		}
-		.dark .card-hover:hover,
-		.dark .card-active,
-		.dark .card-hover.border-0::before,
-		.dark .card-active.border-0::before {
-			border-color: rgba(62, 62, 62, 0.7) !important;
-		}
-		.dark .card-product .price {
-			color: #fff !important;
-		}
-		.dark .card {
-			color: rgba(255, 255, 255, 0.7) !important;
-			background-color: #111111 !important;
-		}
-		.dark .card-header {
-			border-color: rgba(255, 255, 255, 0.12);
-		}
-		.dark .border-top, .dark .border-bottom {
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .signin-form .signin-form-card {
-			background-color: #111111 !important;
-		}
-		.dark .signin-form .signin-form-card .nav-link-style {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark .signin-form .signin-form-card .nav-link-style:hover {
-			color: #ff9400 !important;
-		}
-		.dark .section-help-cta {
-			background-color: #101519 !important;
-		}
-		.dark .faq-card {
-			background-color: #111111 !important;
-			border-color: transparent !important;
-		}
-		.dark .list-group-item {
-			background-color: #111111 !important;
-		}
-		.dark .list-group-item a {
-			color: #fff !important;
-		}
-		.dark .list-group-item.active {
-			background-color: #ff9400 !important;
-		}
-		.dark .list-group-item.active a {
-			color: #fff !important;
-		}
-		.dark .form-control {
-			background-color: #171a21;
-			color: #ffffff !important;
-			border-color: rgba(255, 255, 255, 0.12);
-		}
-		.dark .form-label, .dark .col-form-label {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark .form-control-plaintext {
-			color: #fff !important;
-		}
-		.dark .select2-selection {
-			background-color: #171a21 !important;
-			color: #fff !important;
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .select2-results__option {
-			background-color: #171a21 !important;
-			color: #fff !important;
-		}
-		.dark .select2-results__option[aria-selected=true] {
-			background-color: #ff9400 !important;
-			color: #fff !important;
-		}
-		.dark .select2-results__option--highlighted {
-			background-color: #ffe1b9 !important;
-			color: #ff9400 !important;
-		}
-		.dark .select2-container .select2-search--inline .select2-search__field {
-			background-color: #171a21 !important;
-		}
-		.dark .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice {
-			background-color: #171a21 !important;
-			color: #fff !important;
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice__remove:hover {
-			color: #fff
-		}
-		.dark .select2-dropdown {
-			border-color: rgb(53 49 49) !important;
-		}
-		.dark #searchBox .input-group-prepend .input-group-text {
-			border-radius: 0;
-			height: 100%;
-			background-color: #171a21 !important;
-		}
-		.dark tr {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark #leaderboards tr.active {
-			background-color: #ff9400 !important;
-			color: #fff !important;
-		}
-		.dark .table>:not(caption)>*>* {
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .search-cancel {
-			background-color: #171a21;
-			color: #fff;
-			height: 100%;
-		}
-		.dark .bg-dark-2 {
-			background-color: #101519 !important;
-		}
-		.dark .store-nav .nav-link.active, .dark .store-nav .nav-link:hover {
-			color: #fff !important;
-		}
-		.dark .broadcast {
-			background-color: #111111;
-		}
-		.dark .page-item.active .page-link {
-			color: #fff !important;
-			background-color: #111111 !important;
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .dropdown-menu {
-			background-color: #171a21 !important;
-			color: #fff !important;
-		}
-		.dark .dropdown-item:hover, .dark .dropdown-item.active {
-			background-color: #ff9400 !important;
-			color: #fff !important;
-		}
-		.dark .dropdown-divider {
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .nav-tabs .nav-item.show .nav-link,
-		.dark .nav-tabs .nav-link.active {
-			color: #fff !important;
-			border-color: rgba(255, 255, 255, 0.4) !important
-		}
-		.dark .nav-tabs .nav-link {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark .nav-link-style:hover {
-			color: #fff !important;
-		}
-		.dark .profile-card {
-			background-color: #111111 !important;
-		}
-		.dark .profile-card .bg-secondary {
-			background-color: #000 !important;
-		}
-		.dark .btn-profile {
-			color: #fff !important;
-			background-color: #ff9400 !important;
-			border-color: transparent !important;
-		}
-		.dark .btn-profile:hover {
-			border-color: transparent !important;
-		}
-		.dark .modal-content {
-			color: rgba(255, 255, 255, 0.7) !important;
-			border: 1px solid rgba(255, 255, 255, 0.12) !important;
-			background-color: #000 !important;
-		}
-		.dark .modal-header {
-			color: #fff !important;
-		}
-		.dark .title.background:before {
-			border-color: rgba(255, 255, 255, 0.2) !important;
-		}
-		.dark .title span {
-			color: #fff !important;
-			background-color: #000 !important;
-		}
-		.dark .modal-header, .dark .modal-footer {
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .swal2-popup {
-			border: 1px solid rgba(255, 255, 255, 0.12) !important;
-			background-color: #000 !important;
-		}
-		.dark #swal2-content {
-			color: rgba(255, 255, 255, 0.7) !important;
-		}
-		.dark .was-validated .form-control:valid,
-		.dark .was-validated .form-control.is-valid,
-		.dark .was-validated .form-select:valid,
-		.dark .was-validated .form-select.is-valid {
-			border-color: #16c995 !important;
-		}
-		.dark .btn-tag {
-			color: #fff !important;
-			background-color: #171a21 !important;
-			border-color: rgba(255, 255, 255, 0.12) !important;
-		}
-		.dark .meta-link {
-			color: rgba(255, 255, 255, 0.85) !important;
-		}
-		.dark .meta-link:hover {
-			color: #fff !important;
-		}
-		
-		.dark .vip-table {
-			background-color: #111111 !important;
-		}
-		.dark .table-header {
-			color: #fff !important;
-		}
-		.dark .ck-editor__main a {
-			color: #007bff !important;
-		}
-		.dark .ck-editor__main a:active,
-		.dark .ck-editor__main a:hover,
-		.dark .ck-editor__main a:focus{
-			color: #0056b3 !important;
-		}
-		
-		.dark pre {
-			color: #ffffff !important;
-			border: 1px solid #293d54;
-			padding: 10px 20px;
-			border-radius: 10px;
-		}
-		
-		.shopping-cart-count-circle {
-			background-color: #ff7100;
-		}
-	</style>
-	
-	<!-- ICON IMAGES -->
-	<style>
-      .card-title.last-storebuyers:after {
-          background-image: url(/assets/blaze/img/extras/last-storebuyers-icon.png);
-      }
-      .card-title.last-donators:after {
-          background-image: url(/assets/blaze/img/extras/last-donators-icon.png);
-      }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AzeLand - İdarəetmə Paneli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.leaderos.net/icons/v7/css/all.min.css">
+    <style>
+        :root { --primary: #2ecc71; --dark: #f8f9fa; --card-bg: #ffffff; }
+        body { background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; transition: 0.3s; }
+        
+        /* Header & Banner */
+        .header-banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://wallpaperaccess.com/full/1151158.jpg');
+            background-size: cover; background-position: center; padding: 80px 0; color: white; text-align: center;
+        }
+        .logo-img { width: 180px; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
 
-      .card-title.online-staff:after {
-          background-image: url(/assets/blaze/img/extras/online-staff-icon.png);
-      }
-      .card-title.games:after {
-          background-image: url(/assets/blaze/img/extras/games-icon.png);
-      }
-      .card-title.leaderboards:after {
-          background-image: url(/assets/blaze/img/extras/leaderboards-icon.png);
-      }
-	</style>
-	
-	
-	<!-- CUSTOM CSS -->
-	<style type="text/css">
-			</style>
-	
-	<!-- ROLE CSS -->
-	<style type="text/css">
-									
-													
-							</style>
-	
-		</head>
-<body style="overflow: auto;" class="light">
-<div class="header-banner" style="margin-top: 0">
-	<div id="parallax-header-image">
-		<img data-depth="0.25" class="header-banner-image" src="/assets/blaze/img/extras/header-bg.png?cache=1777282776">
-	</div>
-	<div class="header-banner-content">
-		<div class="container">
-			<div class="row g-0 w-100 align-items-center">
-				<div class="col-md-4 d-flex justify-content-start">
-					<a href="#!" data-toggle="copyip" data-clipboard-action="copy" data-clipboard-text="mc.azetopia.xyz" class="d-none d-lg-flex text-uppercase">
-						<div class="me-3">
-							<i class="shi-gamepad text-white" style="font-size: 3rem;"></i>
-						</div>
-						<div>
-							<div style="color: #bbb;">
-																	<span>0 players online</span>
-															</div>
-							<div>
-								<span class="text-white">mc.azetopia.xyz</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 d-flex flex-column justify-content-center">
-					<div class="zoom-hover text-center">
-						<a href="/">
-							<img src="/assets/core/images/uploads/5a9072333f21899b67fef846badce577.webp?cache=1777282776" class="header-banner-logo" alt="AzeTopia #İmperatorluğu Logo">
-						</a>
-					</div>
-											<div class="text-center mt-4">
-							<a href="/play" class="btn-play">
-								<span>İndi Oyna</span>
-							</a>
-						</div>
-									</div>
-				<div class="col-md-4 d-none d-lg-flex justify-content-end">
-					<a href="https://discord.gg/VXHwQHPU4M" class="d-flex text-end text-uppercase" target="_blank">
-						<div>
-							<div>
-								<span style="color: #bbb;">Qoşulmaq üçün klikləyin!</span>
-							</div>
-							<div>
-								<span class="text-white">Discord Server</span>
-							</div>
-						</div>
-						<div class="ms-3">
-							<i class="shi-discord text-white" style="font-size: 3rem;"></i>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+        /* Navbar */
+        .navbar { background: white !important; border-bottom: 3px solid var(--primary); padding: 15px 0; }
+        .nav-link { font-weight: 600; color: #444 !important; margin: 0 10px; }
+        .nav-link.active { color: var(--primary) !important; }
+        
+        /* Admin Panel Stili */
+        #admin-section { display: none; background: #e8f5e9; border: 2px dashed var(--primary); border-radius: 15px; padding: 20px; margin-bottom: 30px; }
+        .admin-badge { background: var(--primary); color: white; padding: 5px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+
+        /* Xəbər Kartları */
+        .news-card { border: none; border-radius: 15px; overflow: hidden; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .news-card:hover { transform: translateY(-5px); }
+        .news-img { height: 200px; object-fit: cover; width: 100%; }
+
+        /* Giriş Modalı */
+        .modal-content { border-radius: 20px; border: none; }
+        .btn-primary { background: var(--primary) !important; border: none; padding: 10px 25px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="header-banner">
+    <div class="container">
+        <img src="https://i.imgur.com/8YvL6M3.png" class="logo-img mb-3" alt="AzeLand">
+        <h1 class="fw-bold">AZELAND İMPERATORLUĞU</h1>
+        <p class="lead">Online: <span id="player-count">42</span> | play.azeland.xyz</p>
+        <button class="btn btn-light rounded-pill px-4 fw-bold shadow">İndi Oyna</button>
+    </div>
 </div>
 
-<header class="header navbar navbar-expand-lg navbar-light bg-light navbar-shadow navbar-sticky" data-scroll-header data-fixed-element>
-	<div class="container px-0 px-xl-3">
-		<button class="navbar-toggler ms-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="d-flex align-items-center order-lg-3 ms-lg-auto">
-							<a class="nav-link-style text-nowrap" href="/login/">
-					<i class="shi-user fs-xl me-2"></i>
-					Daxil ol				</a>
-									<a class="btn btn-primary ms-grid-gutter d-none d-lg-inline-block" href="/register/">
-						Qeyd Ol					</a>
-														<a href="/cart/" class="btn btn-icon btn-primary ms-2 position-relative">
-					<span class="shopping-cart-count shopping-cart-count-circle">0</span>
-					<i class="shi shi-shopping-cart"></i>
-				</a>
-					</div>
-		<div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
-			<div class="offcanvas-header navbar-shadow">
-				<h5 class="mt-1 mb-0">Menu</h5>
-				<button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-			</div>
-			<div class="offcanvas-body">
-				<!-- Menu-->
-				<ul class="navbar-nav" style="margin-left: -18px">
-																		<li class="nav-item active">
-								<a class="nav-link" href="/" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-home" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Əsas Səhifə									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="/store" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-shopping-cart" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Mağaza									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="/help" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-question-circle" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Kömək									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="/vote" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-poll" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Oy Ver									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="/fortune-wheel" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-chart-pie" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Bəxt Çarxı									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="/support/tickets" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-life-ring" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Dəstək									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="/punishments" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-ban" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Cəza Alanlar									</span>
-								</a>
-							</li>
-																								<li class="nav-item ">
-								<a class="nav-link" href="http://map.azetopia.xyz:8123/" >
-									<!--<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<i class="fas fa-link" style="font-size: 1.125rem;"></i>
-									</span>-->
-									<span class="nav-link-title">
-										Xəritə									</span>
-								</a>
-							</li>
-															</ul>
-			</div>
-							<div class="offcanvas-footer border-top">
-					<a href="/login/" class="btn btn-profile btn-outline-secondary w-100 me-2">
-						<i class="shi-log-in me-1"></i>
-						Daxil ol					</a>
-											<a href="/register/" class="btn btn-primary w-100">
-							<i class="shi-user me-1"></i>
-							Qeyd Ol						</a>
-									</div>
-					</div>
-	</div>
-</header><main class="main" role="main">
-	
-<section class="section home-section">
-	<div class="container">
-									
-		<div class="row">
-			<div class="col-md-12">
-				<nav aria-label="breadcrumb">
-	<ol class="breadcrumb">
-		<li class="breadcrumb-item">
-			<a href="/">
-				Əsas Səhifə			</a>
-		</li>
-												<li class="breadcrumb-item active">
-					Xəbərlər				</li>
-						</ol>
-</nav>			</div>
-		</div>
-		<h2 class="h3 mb-3">Xəbərlər</h2>
-		<div class="row">
-			<div class="col-md-8">
-															<div class="card card-hover">
-							<div class="row g-0">
-								<div class="col-md-5">
-									<a class="d-flex h-100" href="/blog/posts/boyuk-elan-azetopia-yeni-sezon/">
-										<img class="lazyload card-img-right" data-src="/assets/core/images/blog/posts/6a57b74bb1cfaa22a2fd8ff494f19082.png" src="/assets/core/images/loaders/news.png" alt="BÖYÜK ELAN – AZETOPIA YENİ SEZON!">
-									</a>
-								</div>
-								<div class="col-md-7">
-									<div class="news-card-body">
-										<a class="meta-link fs-sm mb-2" href="/blog/categories/yenil-nm/">
-											Yenilənmə										</a>
-										<span class="meta-link fs-sm mb-2">-</span>
-										<span class="meta-link fs-sm mb-2">
-											27 apr 2026 08:57										</span>
-										<h3 class="h4 nav-heading mb-3">
-											<a href="/blog/posts/boyuk-elan-azetopia-yeni-sezon/">
-												BÖYÜK ELAN – AZETOPIA YENİ SEZON!											</a>
-										</h3>
-										<p class="mb-3">📅 Tarix: 20 May 2026Uzun müddətli hazırlıqdan sonra AzeTopia Minecraft Serveri tamamilə yenilənmiş YENİ SEZON ilə geri qayıdır! 🚀💥 Sizi nələr gözləyir?• Tam sıfırlanmış dünya və balanslaşdırılmış gameplay• Yeni sistemlər, eventlər və xüsusi mükafatla...</p>
-										<div class="d-flex justify-content-end">
-											<a href="/blog/posts/boyuk-elan-azetopia-yeni-sezon/" class="btn btn-primary">Ətraflı</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-											<div class="card card-hover">
-							<div class="row g-0">
-								<div class="col-md-5">
-									<a class="d-flex h-100" href="/blog/posts/skyblock-tanitim/">
-										<img class="lazyload card-img-right" data-src="/assets/core/images/blog/posts/7e0592dcf6b0d595a2fd5a1616bd9a8c.webp" src="/assets/core/images/loaders/news.png" alt="Skyblock Tanıtım">
-									</a>
-								</div>
-								<div class="col-md-7">
-									<div class="news-card-body">
-										<a class="meta-link fs-sm mb-2" href="/blog/categories/x-b-rl-r/">
-											Xəbərlər										</a>
-										<span class="meta-link fs-sm mb-2">-</span>
-										<span class="meta-link fs-sm mb-2">
-											20 iyl 2025 14:16										</span>
-										<h3 class="h4 nav-heading mb-3">
-											<a href="/blog/posts/skyblock-tanitim/">
-												Skyblock Tanıtım											</a>
-										</h3>
-										<p class="mb-3">🎉 AzeTopia Skyblock Rəsmi Açılışını Etdi! 🎉Salam AzeTopia ailəsi!Sizdən gələn çoxsaylı istəklərə cavab olaraq Skyblock oyun modumuz artıq rəsmi olaraq istifadənizdədir!🔹 Skyblock-da sizi nələr gözləyir?Öz adanı qur, böyüt və inkişaf etdir.Unikal iqti...</p>
-										<div class="d-flex justify-content-end">
-											<a href="/blog/posts/skyblock-tanitim/" class="btn btn-primary">Ətraflı</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-											<div class="card card-hover">
-							<div class="row g-0">
-								<div class="col-md-5">
-									<a class="d-flex h-100" href="/blog/posts/survival/">
-										<img class="lazyload card-img-right" data-src="/assets/core/images/blog/posts/54a6419c1aaa2438b4052ac81768f50d.png" src="/assets/core/images/loaders/news.png" alt="Survival">
-									</a>
-								</div>
-								<div class="col-md-7">
-									<div class="news-card-body">
-										<a class="meta-link fs-sm mb-2" href="/blog/categories/x-b-rl-r/">
-											Xəbərlər										</a>
-										<span class="meta-link fs-sm mb-2">-</span>
-										<span class="meta-link fs-sm mb-2">
-											13 iyl 2025 21:34										</span>
-										<h3 class="h4 nav-heading mb-3">
-											<a href="/blog/posts/survival/">
-												Survival											</a>
-										</h3>
-										<p class="mb-3">Azetopia XəbərləriTowny-də olduğu kimi qalır ordada gelişə yeni krallıqlar qura ittifaqlar edə bilərsiniz,Survival Serverimiz artıq istifadənizdədir!Survival bölməsi də tam aktivdir və sizi gözləyir!Yeniliklər nələrdir?Yeni rank sistemləri əlavə olun...</p>
-										<div class="d-flex justify-content-end">
-											<a href="/blog/posts/survival/" class="btn btn-primary">Ətraflı</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-											<div class="card card-hover">
-							<div class="row g-0">
-								<div class="col-md-5">
-									<a class="d-flex h-100" href="/blog/posts/azetopia-tanitim/">
-										<img class="lazyload card-img-right" data-src="/assets/core/images/blog/posts/9fde2bb1fb912bf2fd86af3daca70423.png" src="/assets/core/images/loaders/news.png" alt="AzeTopia Tanıtım">
-									</a>
-								</div>
-								<div class="col-md-7">
-									<div class="news-card-body">
-										<a class="meta-link fs-sm mb-2" href="/blog/categories/x-b-rl-r/">
-											Xəbərlər										</a>
-										<span class="meta-link fs-sm mb-2">-</span>
-										<span class="meta-link fs-sm mb-2">
-											10 iyl 2025 00:28										</span>
-										<h3 class="h4 nav-heading mb-3">
-											<a href="/blog/posts/azetopia-tanitim/">
-												AzeTopia Tanıtım											</a>
-										</h3>
-										<p class="mb-3">AzeTopia serveri 2025-ci ilin İyul ayının 1 -də açılmış və Towny əsaslı bir Minecraft serveridir.Serverimizdə qızıl toplayaraq öz şəhərlərinizi və ölkələrinizi qura, müharibələr apara və bütün ticarətə nəzarət edə bilərsiniz. Mədənçilik, odunçuluq, b...</p>
-										<div class="d-flex justify-content-end">
-											<a href="/blog/posts/azetopia-tanitim/" class="btn btn-primary">Ətraflı</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-										<div class="d-md-flex justify-content-center align-items-center pt-5 pb-2 mb-4">
-							<ul class="pagination ">
-		<li class="page-item">
-			<a class="page-link" href="#!" tabindex="-1">
-				<i class="shi-chevron-left"></i>
-			</a>
-		</li>
-		
-																																		<li class="page-item active d-none d-sm-block" aria-current="page" >
-					<a class="page-link" href="?page=1">1</a>
-				</li>
-																																
-		<li class="page-item">
-			<a class="page-link" href="#!" aria-disabled="true">
-				<i class="shi-chevron-right"></i>
-			</a>
-		</li>
-	</ul>
-					</div>
-							</div>
-							<div class="col-md-4">
-										
-																		<div class="card discord-widget mb-4">
-								<a href="https://discord.gg/VXHwQHPU4M" rel="external">
-									<div class="card-body">
-										<img class="discord-logo mb-3" src="/assets/blaze/img/extras/discord-sidebar.1777265343.svg" />
-										
-										<div class="row align-items-center">
-											<div class="col">
-												<span class="h4 text-white" data-toggle="discordonline" data-discord-id="1322596677697409034">0</span>
-												<span class="d-block">Üzv online</span>
-											</div>
-											<div class="col-auto">
-												<button type="button" class="btn btn-light rounded-pill btn-circle" style="color: #5a5b75;">
-													<i class="shi-arrow-right"></i>
-												</button>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-																
-																		<div class="card mb-3">
-								<div class="card-header">
-									<div class="row">
-										<div class="col">
-											<h2 class="card-title top-donators">Ən yaxşı donorlar</h2>
-										</div>
-										<div class="col-auto">
-											<span>(All Time)</span>
-										</div>
-									</div>
-								</div>
-								<div class="card-body p-0">
-									<div class="table-responsive">
-										<table class="table table-hover">
-											<thead>
-											<tr>
-												<th>Username</th>
-												<th class="text-end">Total</th>
-											</tr>
-											</thead>
-											<tbody>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Kmawaki11/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Kmawaki11"		>														Kmawaki11													</td>
-													<td class="text-end">5AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Hyrixss/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Hyrixss"		>														Hyrixss													</td>
-													<td class="text-end">5AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/mendamavoy/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="mendamavoy"		>														mendamavoy													</td>
-													<td class="text-end">5AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/LuciferSTZ/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="LuciferSTZ"		>														LuciferSTZ													</td>
-													<td class="text-end">5AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Cavid02/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Cavid02"		>														Cavid02													</td>
-													<td class="text-end">5AZN</td>
-												</tr>
-																						</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-																
-																					
-																		<div class="card mb-3">
-								<div class="card-header">
-									<h2 class="card-title last-donators">Son İanələr</h2>
-								</div>
-								<div class="card-body p-0">
-									<div class="table-responsive">
-										<table class="table table-hover">
-											<thead>
-											<tr>
-												<th>Username</th>
-												<th class="text-end">Amount</th>
-											</tr>
-											</thead>
-											<tbody>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/mendamavoy/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="mendamavoy"		>														mendamavoy													</td>
-													<td class="text-end">5AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/ulvunizm/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="ulvunizm"		>														ulvunizm													</td>
-													<td class="text-end">0.05AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/ulvunizm/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="ulvunizm"		>														ulvunizm													</td>
-													<td class="text-end">1.20AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Kmawaki11/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Kmawaki11"		>														Kmawaki11													</td>
-													<td class="text-end">3AZN</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Kmawaki11/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Kmawaki11"		>														Kmawaki11													</td>
-													<td class="text-end">2AZN</td>
-												</tr>
-																						</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-																
-																		<div class="card mb-3">
-								<div class="card-header">
-									<h2 class="card-title last-storebuyers">Son Satınalmalar</h2>
-								</div>
-								<div class="card-body p-0">
-									<div class="table-responsive">
-										<table class="table table-hover">
-											<thead>
-											<tr>
-												<th>Username</th>
-												<th class="text-center">Kateqoriya</th>
-												<th class="text-center">Məhsul</th>
-											</tr>
-											</thead>
-											<tbody>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Jabiyev/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Jabiyev"		>														Jabiyev													</td>
-													<td class="text-center">Sandıq Açarları</td>
-													<td class="text-center">Alət Sandıqı</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/mendamavoy/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="mendamavoy"		>														mendamavoy													</td>
-													<td class="text-center">Rank</td>
-													<td class="text-center">Towny MViP+</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/ulvunizm/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="ulvunizm"		>														ulvunizm													</td>
-													<td class="text-center">Spawner</td>
-													<td class="text-center">Dəmir Golem Spawner</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Kmawaki11/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Kmawaki11"		>														Kmawaki11													</td>
-													<td class="text-center">Rank</td>
-													<td class="text-center">Towny MViP+</td>
-												</tr>
-																							<tr>
-													<td>
-														<img
-	class="lazyload avatar avatar-xs me-2"
-	data-src="https://minotar.net/helm/Kmawaki11/128.png"
-	src="/assets/core/images/loaders/head.png"
-	alt="Kmawaki11"		>														Kmawaki11													</td>
-													<td class="text-center">Spawner</td>
-													<td class="text-center">Zombi Spawner</td>
-												</tr>
-																						</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-															</div>
-					</div>
-	</div>
-</section></main>
-<!-- Back to top button-->
-<a id="scrollUp" class="btn-scroll-top" href="#" data-scroll data-fixed-element>
-	<i class="btn-scroll-top-icon shi-arrow-up"></i>
-</a>
-<!-- Footer-->
-	<section class="footer-banner jarallax bg-dark py-5" data-jarallax data-speed="0.25">
-		<span class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: .7;"></span>
-		<div class="jarallax-img" style="background-image: url(/assets/blaze/img/extras/footer-bg.png);"></div>
-		<div class="container position-relative zindex-5 text-white">
-			<div class="row align-items-center">
-				<div class="col-12 col-md">
-					<h3 class="h3 mb-0 text-white text-center text-md-start">
-						Ən yaxşısı olmağa hazırsınız?					</h3>
-				</div>
-				<div class="col-12 col-md-auto mt-4 mt-md-0">
-					<a href="/play/" class="btn btn-lg btn-light w-100">
-						<img class="me-2" src="/assets/blaze/img/icons/sword.1777265343.svg" width="24" height="24">
-						İndi Oyna					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-<footer class="footer bg-dark pt-5 pt-md-6">
-	<div class="container pt-3 pt-md-0">
-		<div class="row mb-4">
-			<div class="col-md-5 mb-3">
-				<div class="d-sm-flex justify-content-between">
-					<div class="widget widget-light pb-1 mb-4">
-						<h4 class="widget-title">Haqqımızda</h4>
-						<div class="text-light opacity-70 mb-2 ck-content">
-															<p>AzeTopia serveri 2025-ci ilin iyul ayının 1-də açılmış və Towny əsaslı bir Minecraft serveridir.&nbsp;</p><p>Serverimizdə qızıl toplayaraq öz şəhərlərinizi və ölkələrinizi qura, müharibələr apara və bütün ticarətə nəzarət edə bilərsiniz. Mədənçilik, odunçuluq, balıqçılıq kimi sahələrdə səviyyə atlayaraq digər oyunçulardan üstün ola bilərsiniz. Siz də serverimizdə oynamaq istəyirsinizsə, soldakı məlumatlandırma bölməsindən serverə daxil ola bilərsiniz</p>													</div>
-						<div class="d-flex gap-1 mt-4">
-														
-														
-							<a href="?theme=dark" class="btn btn-icon btn-secondary hide-theme-dark">
-								<i class="shi shi-moon"></i>
-							</a>
-							<a href="?theme=light" class="btn btn-icon btn-secondary hide-theme-light">
-								<i class="shi shi-sun"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-							<div class="col-md-2">
-					<div class="widget widget-light pb-1 mb-4">
-						<h4 class="widget-title">Sürətli Menyu</h4>
-													<ul>
-																	<li>
-										<a href="/" class="widget-link" >
-																							<i class="fas fa-home text-white me-1"></i>
-																						Əsas Səhifə										</a>
-									</li>
-																	<li>
-										<a href="/store" class="widget-link" >
-																							<i class="fas fa-shopping-cart text-white me-1"></i>
-																						Mağaza										</a>
-									</li>
-																	<li>
-										<a href="/forum" class="widget-link" >
-																							<i class="fas fa-comment text-white me-1"></i>
-																						Forum										</a>
-									</li>
-																	<li>
-										<a href="/help" class="widget-link" >
-																							<i class="fas fa-question-circle text-white me-1"></i>
-																						Kömək										</a>
-									</li>
-																	<li>
-										<a href="/support/tickets" class="widget-link" >
-																							<i class="fas fa-life-ring text-white me-1"></i>
-																						Dəstək										</a>
-									</li>
-															</ul>
-											</div>
-				</div>
-							<div class="col-md-2">
-					<div class="widget widget-light pb-1 mb-4">
-						<h4 class="widget-title">Sosial Media</h4>
-													<ul>
-																	<li>
-										<a href="" class="widget-link" target="_blank">
-																							<i class="fab fa-facebook text-white me-1"></i>
-																						Facebook										</a>
-									</li>
-																	<li>
-										<a href="https://instagram.com/azetopiamc" class="widget-link" target="_blank">
-																							<i class="fab fa-instagram text-white me-1"></i>
-																						Instagram										</a>
-									</li>
-																	<li>
-										<a href="https://x.com/azetopiamc" class="widget-link" target="_blank">
-																							<i class="fab fa-x-twitter text-white me-1"></i>
-																						X										</a>
-									</li>
-																	<li>
-										<a href="https://www.youtube.com/@azetopiaxyz" class="widget-link" target="_blank">
-																							<i class="fab fa-youtube text-white me-1"></i>
-																						YouTube										</a>
-									</li>
-																	<li>
-										<a href="https://tiktok.com/@azetopiamc" class="widget-link" target="_blank">
-																							<i class="fab fa-tiktok text-white me-1"></i>
-																						TikTok										</a>
-									</li>
-																	<li>
-										<a href="https://discord.gg/VXHwQHPU4M" class="widget-link" target="_blank">
-																							<i class="fab fa-discord text-white me-1"></i>
-																						Discord										</a>
-									</li>
-															</ul>
-											</div>
-				</div>
-							<div class="col-md-2">
-					<div class="widget widget-light pb-1 mb-4">
-						<h4 class="widget-title">Links</h4>
-													<ul>
-																	<li>
-										<a href="/rules" class="widget-link" >
-																						Qaydalar										</a>
-									</li>
-																	<li>
-										<a href="/terms" class="widget-link" >
-																						Xidmət Şərtləri										</a>
-									</li>
-																	<li>
-										<a href="/privacy" class="widget-link" >
-																						Məxfilik Siyasəti										</a>
-									</li>
-															</ul>
-											</div>
-				</div>
-							<div class="col-md-2">
-					<div class="widget widget-light pb-1 mb-4">
-						<h4 class="widget-title">Sponsor Linklər</h4>
-													<ul>
-																	<li>
-										<a href="https://r10.az" class="widget-link" target="_blank">
-																							<i class="fas fa-link text-white me-1"></i>
-																						R10.az										</a>
-									</li>
-																	<li>
-										<a href="https://epingame.az" class="widget-link" target="_blank">
-																							<i class="far fa-gamepad-alt text-white me-1"></i>
-																						EpinGameAZ										</a>
-									</li>
-															</ul>
-											</div>
-				</div>
-					</div>
-	</div>
-	<div class="bg-dark py-4 py-md-3">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-md text-center text-md-start mb-2 mb-md-0 text-light opacity-50 me-1">
-					Bütün Hüquqlar Qorunur. &copy; 2026				</div>
-				<div class="col-12 col-md-auto text-center text-md-start">
-					<a href="https://www.leaderos.com.tr" target="_blank" id="powered_by_leaderos">Powered by <strong>LeaderOS</strong></a><script>
-						var is_error;
-						var interval = setInterval(function() {
-							if (is_error) {
-								clearInterval(interval);
-								return false;
-							}
-							
-							var brand_el = document.getElementById("powered_by_leaderos");
-							var is_brand_visible = true;
-							
-							if (brand_el) {
-								var style = window.getComputedStyle(brand_el);
-								if (brand_el.offsetParent === null) {
-									is_brand_visible = false;
-								} else if (style.display === "none") {
-									is_brand_visible = false;
-								} else if (style.visibility === "hidden") {
-									is_brand_visible = false;
-								}
-							} else {
-								is_brand_visible = false;
-							}
-							
-							if (!is_brand_visible) {
-								is_error = true;
-								document.body.innerHTML = "<iframe src='https://www.leaderos.com.tr/powered_by_leaderos.php' style='border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%'></iframe>";
-							}
-						}, 1000);
-					</script>				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Əsas Səhifə</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mağaza</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kömək</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Dəstək</a></li>
+                <li class="nav-item" id="admin-btn-nav" style="display:none;">
+                    <a class="nav-link text-danger fw-bold" href="#admin-section">🛡️ Admin Panel</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center" id="auth-area">
+                <button class="btn btn-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Daxil ol</button>
+                <button class="btn btn-primary ms-2">Qeyd Ol</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    
+    <section id="admin-section">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="mb-0 text-success"><span class="admin-badge me-2">ADMIN</span> Xoş gəldin, Məhəmməd!</h4>
+            <button class="btn btn-sm btn-outline-danger" onclick="logout()">Çıxış Et</button>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="form-label small fw-bold">Xəbər Şəkli (URL)</label>
+                <input type="text" id="news-img-input" class="form-control mb-2" placeholder="https://...">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label small fw-bold">Başlıq</label>
+                <input type="text" id="news-title-input" class="form-control mb-2" placeholder="Xəbər başlığı...">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label small fw-bold">Mətn</label>
+                <textarea id="news-text-input" class="form-control mb-2" rows="1" placeholder="Qısa məlumat..."></textarea>
+            </div>
+        </div>
+        <button class="btn btn-success w-100 mt-2 fw-bold" onclick="addNews()">Xəbəri Paylaş</button>
+    </section>
+
+    <h3 class="mb-4 fw-bold">Son Xəbərlər</h3>
+    <div class="row" id="news-container">
+        <div class="col-md-6 mb-4">
+            <div class="card news-card h-100">
+                <img src="https://i.imgur.com/XqR7m9A.png" class="news-img" alt="Xəbər">
+                <div class="card-body">
+                    <div class="text-muted small mb-2">27 Aprel 2026</div>
+                    <h5 class="fw-bold">AzeLand Yeni Sezon Açılışı!</h5>
+                    <p class="text-muted">Böyük hazırlıqdan sonra AzeLand yenilənmiş Towny sistemi ilə geri qayıdır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+            <div class="text-center mb-4">
+                <h4 class="fw-bold">Hesaba Giriş</h4>
+                <p class="text-muted small">Məhəmməd, admin panel üçün öz hesabına gir.</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label small fw-bold">İstifadəçi Adı</label>
+                <input type="text" id="user-input" class="form-control" placeholder="mehemmed">
+            </div>
+            <div class="mb-4">
+                <label class="form-label small fw-bold">Şifrə</label>
+                <input type="password" id="pass-input" class="form-control" placeholder="••••••••">
+            </div>
+            <button class="btn btn-primary w-100 fw-bold" onclick="login()">Giriş Et</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
 <script>
-  var lang = {
-    credits: "%credit% credit(s)",
-    search: "Axtar...",
-    loading: "Yüklənir...",
-    confirm_delete: "Silmək istədiyinizə əminsiniz?",
-    player_not_found: "Oyunçu tapılmadı!",
-    play_again: "Yenidən oynayın",
-    spinning: "Fırlanır...",
-    apply: "Apply",
-    remove: "Remove",
-    alert_btn_ok: "OK",
-    alert_btn_cancel: "Ləğv et",
-    alert_btn_confirm: "Təsdiq edin",
-    alert_btn_buy_credit: "Buy Credits",
-    alert_title_success: "Uğurlu!",
-    alert_title_error: "Xəta!",
-    alert_title_warning: "Xəbərdarlıq!",
-    alert_title_you_lost: "İtirdin!",
-    alert_title_you_win: "Siz Qazandınız!",
-    alert_message_server_address_copied: "Server ünvanı mübadilə buferinə köçürüldü!",
-    alert_message_something_went_wrong: "Something went wrong! Please try again later.",
-    alert_message_lottery_error_duration: "You have to wait until %date% to re-spin for free.",
-    alert_message_lottery_you_lost: "Sorry, you lost! Try again next time.",
-    alert_message_lottery_you_win: "Congratulations! You won <strong>%prize%</strong>!",
-    alert_message_lottery_you_win_chest: "The product has been added to your chest.",
-    alert_message_lottery_you_win_credit: "Current Credit: %credit%",
-    alert_message_lottery_credit_error: "You don't have enough credit to play the game.",
-    alert_message_chest_confirm: "Please make sure you are on the server before confirming, otherwise the product may not reach you!",
-    alert_message_chest_sending: "Delivery is in progress, please wait and do not leave the page...",
-    alert_message_chest_sent: "The product has been successfully delivered! Have fun!",
-    alert_message_chest_server_error: "There was a problem connecting to the server! Please try again later.",
-    alert_message_chest_amount_error: "You can receive a maximum of %amount%!",
-    alert_message_login: "Bunu etmək üçün daxil olun.",
-    help_voting_success: "Siz uğurla səs verdiniz!",
-    alert_message_checkout_credit_error: "You don't have enough credit.",
-    alert_message_checkout_success: "Your purchase has been completed and added to your chest.",
-    alert_message_checkout_quantity_error: "Enter a valid quantity!",
-    alert_message_checkout_stock_error: "Stock limit has been reached for this product!",
-    alert_message_checkout_stock_error2: "Not enough items in the stock!",
-    alert_message_checkout_cart_empty_error: "Səbətiniz boşdur!",
-    alert_message_checkout_coupon_invalid: "Coupon is invalid!",
-    alert_message_checkout_coupon_invalid_for_cart: "This coupon is not valid for your shopping cart!",
-    alert_message_checkout_coupon_used: "You have used this coupon before!",
-    alert_message_checkout_coupon_expired: "This coupon has expired!",
-    alert_message_checkout_coupon_login: "You must be logged in to use coupons!",
-    alert_message_checkout_coupon_success: "Coupon applied successfully!",
-    alert_message_checkout_coupon_price: "You must have a minimum of %amount% credits in your account to use this coupon!",
-    alert_message_not_found: "Not found!",
-    limited_stock: "Məhdud Stok!",
-    out_of_stock: "Out of Stock!"
-  }
+    // Giriş Sistemi
+    function login() {
+        const user = document.getElementById('user-input').value;
+        const pass = document.getElementById('pass-input').value;
+
+        if(user === "mehemmed" && pass === "mehemmed2012") {
+            localStorage.setItem('is_admin', 'true');
+            localStorage.setItem('user_name', 'Məhəmməd');
+            location.reload();
+        } else {
+            alert("İstifadəçi adı və ya şifrə yanlışdır!");
+        }
+    }
+
+    function logout() {
+        localStorage.clear();
+        location.reload();
+    }
+
+    // Səhifə Yüklənəndə Yoxla
+    window.onload = function() {
+        const isAdmin = localStorage.getItem('is_admin');
+        const userName = localStorage.getItem('user_name');
+
+        if(isAdmin === 'true') {
+            document.getElementById('admin-section').style.display = 'block';
+            document.getElementById('admin-btn-nav').style.display = 'block';
+            document.getElementById('auth-area').innerHTML = `
+                <div class="d-flex align-items-center">
+                    <img src="https://minotar.net/helm/mehemmed/32" class="rounded-circle me-2">
+                    <span class="fw-bold me-3 text-success">${userName}</span>
+                </div>`;
+        }
+
+        // Saxlanılmış xəbərləri yüklə
+        const savedNews = JSON.parse(localStorage.getItem('news_list') || '[]');
+        savedNews.forEach(item => renderNews(item.title, item.text, item.img));
+    };
+
+    // Xəbər Əlavə Etmə Funksiyası
+    function addNews() {
+        const img = document.getElementById('news-img-input').value || 'https://via.placeholder.com/800x400';
+        const title = document.getElementById('news-title-input').value;
+        const text = document.getElementById('news-text-input').value;
+
+        if(!title || !text) return alert("Başlıq və mətn mütləqdir!");
+
+        const newsItem = { img, title, text };
+        
+        // LocalStorage-ə qeyd et
+        const newsList = JSON.parse(localStorage.getItem('news_list') || '[]');
+        newsList.unshift(newsItem);
+        localStorage.setItem('news_list', JSON.stringify(newsList));
+
+        renderNews(title, text, img);
+        
+        // Formanı təmizlə
+        document.getElementById('news-img-input').value = "";
+        document.getElementById('news-title-input').value = "";
+        document.getElementById('news-text-input').value = "";
+    }
+
+    function renderNews(title, text, img) {
+        const container = document.getElementById('news-container');
+        const html = `
+            <div class="col-md-6 mb-4">
+                <div class="card news-card h-100 shadow">
+                    <img src="${img}" class="news-img">
+                    <div class="card-body">
+                        <div class="text-muted small mb-2">İndi paylaşıldı</div>
+                        <h5 class="fw-bold">${title}</h5>
+                        <p class="text-muted">${text}</p>
+                    </div>
+                </div>
+            </div>`;
+        container.insertAdjacentHTML('afterbegin', html);
+    }
 </script>
-	<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
-	<script type="text/javascript" charset="UTF-8">
-		document.addEventListener('DOMContentLoaded', function () {
-			cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"dark","language":"az","page_load_consent_levels":["strictly-necessary", "functionality", "tracking", "targeting"],"notice_banner_reject_button_hide":true,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"AzeTopia #İmperatorluğu","website_privacy_policy_url":"https://azetopia.xyz/privacy"});
-		});
-	</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/16.1.0/lazyload.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/i18n/tr.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
-
-<script type="text/javascript">
-	var $onlineAPI = 2;
-</script>
-<script src="/assets/blaze/js/main.min.1777265343.js"></script>
-<script src="/assets/blaze/js/theme.min.1777265343.js"></script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script cookie-consent="targeting" async src="https://www.googletagmanager.com/gtag/js?id=G-XD9VET0K0Y"></script>
-	<script cookie-consent="targeting">
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag("js", new Date());
-		
-		gtag("config", "G-XD9VET0K0Y");
-	</script>
-
-
 
 </body>
 </html>
